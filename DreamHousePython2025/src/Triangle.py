@@ -4,7 +4,7 @@ from Shape import Shape
 
 
 class Triangle(Shape):
-    def __init__(self, canvas: Canvas, x: int = 50, y: int = 15, height: int = 30, width: int = 40, color: str = "green", fill: str = None, line: int = 2):
+    def __init__(self, canvas: Canvas, x: int = 50, y: int = 15, height: int = 30, width: int = 60, color: str = "blue", fill: str = None, line: int = 2):
         super().__init__(canvas=canvas, x=x, y=y, color=color, fill=fill, line=line)
         self.height = height
         self.width = width
