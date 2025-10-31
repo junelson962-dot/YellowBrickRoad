@@ -4,16 +4,17 @@ from Shape import Shape
 
 
 class Rectangle(Shape):
-    def __init__(self, canvas: Canvas, x: int = 60, y: int = 50, size: int = 50, line: int = 100, color: str = "white", fill: str = None):
+    def __init__(self, canvas: Canvas, x: int = 60, y: int = 50, height: int = 50, width: int = 70, line: int = 100, color: str = "white", fill: str = None):
         super().__init__(canvas=canvas, x=x, y=y, color=color, fill=fill, line=line)
-        self.size = size
+        self.height = height
+        self.width = width
 
     def draw(self):
         if self.is_visible:
-            print(f"Drawing square at ({self.x_position},{self.y_position}) size {self.size} color {self.color} fill {self.fill} line {self.line}")
+            print(f"Drawing square at ({self.x_position}, {self.y_position}) height {self.height} width {self.width} color {self.color} fill {self.fill} line {self.line}")
             self.shape_id = self.canvas.create_rectangle(
                 self.x_position, self.y_position,
-                self.x_position + self.size, self.y_position + self.size,
+                self.x_position + self.width, self.y_position + self.height,
                 outline=self.color, fill=self.fill, width=self.line
             )
 
